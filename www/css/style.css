@@ -1,0 +1,66 @@
+/* Empty. Add your own CSS if you like */
+.titu {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: dodgerblue;
+    font-size: 30px;
+    padding-top: 15px;
+}
+
+.titu2 {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: dodgerblue;
+    font-size: 15px;
+}
+
+.p1 {
+    text-align: center;
+    color: dodgerblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 15px;
+}
+
+.txt {
+    text-align: left;
+    padding-left: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: dodgerblue;
+    font-size: 20px;
+}
+
+.penis {
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 350px;
+}
+
+.genio {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: darkblue;
+}
+
+.version {
+    font-style: oblique;
+}
+
+.esq {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.text2 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.mark {
+    color: darkblue;
+    font-style: italic;
+}
+
+.tab-item {
+color:cornflowerblue;  
+}
+

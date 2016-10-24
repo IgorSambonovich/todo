@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+    <ion-side-menus>
+    <ion-side-menu-content>
+      <ion-header-bar class="bar-positive">
+        <h1 class="title">Dieta Detox</h1>
+      </ion-header-bar>
+      <ion-content delegate-handle="myPageDelegate">
+    <h1 class="titu">Dieta Detox</h1>
+    <ul class="esq">
+        <li><a>Introdução</a></li>
+        <li><a>Objetivo</a></li>
+        <li><a>Dicas</a></li>
+        <li><a>Cardápio</a></li>
+    </ul>
+<br>
+<a class="txt" id='intro'>Introdução</a>
+<div class="text2">
+    <div class="card">
+        <div class="item item-text-wrap">
+<p>A Dieta Detox contribui para eliminar as toxinas causadas pelo consumo exagerado de açúcar refinado, gorduras saturadas/trans/hidrogenadas, alimentos industrializados, álcool, cigarro.</p>
+<p>A Dieta Detox é composta de frutas, verduras, legumes, sucos e chás para purificar as células e acelerar o metabolismo e consequentemente o emagrecimento. Ela também possui baixas calorias, com poucos carboidratos e muito líquido.</p></div>
+    </div>
+</div>
+<br>
+<a class="txt" id='obj'>Objetivo</a>    
+<div class="text2">
+    <div class="card">
+        <div class="item item-text-wrap">
+    <p>O objetivo da Dieta Detox é desintoxicar o corpo, porém, ela é feita com alimento naturais de baixa caloria que promove o emgracimento. O mais interessante é que limpando o corpo das toxinas, essa dieta possibilita um emagrecimento mais duradouro e saudável.</p>
+</div>
+</div>
+</div>
+<br>
+<a id="dicas"></a>
+<a class="txt">Dicas</a>
+<div class="text2">
+    <div class="card">
+    <div class="item item-text-wrap">
+    <ul>
+        <li><a class="mark">Beba bastante água</a>, seu corpo vai precisar dela para eliminar as toxinas.</li>
+        <li><a class="mark">Durma bem</a>, seu corpo irá precisar do descanso para se recompor.</li>
+        <li><a class="mark">Movimente-se</a>, com isso a perda de peso será maior e mais rápida.</li>
+        <li><a class="mark">Desinche-se</a>, sauna e drenagem linfática são recursos para perder medidas ainda mais rápidas.</li>
+    </ul>
+</div>
+</div>
+</div>
+<br>
+<a class="txt" id='cardapio'>Cardápio</a>
+<div class="text2">
+    <div class="card">
+        <div class="item item-text-wrap">
+            <a class="mark">Café da Manhã:</a>
+            <ol>
+                <li>1 Copo de Chá Verde</li>
+                <li>2 Torradas Integrais com 1 colher de chá de mel e gergilim</li>
+                <li>1 Kiwi</li>
+            </ol>
+        </div>
+        <div class="item item-text-wrap">
+            <a class="mark">Lanche da Manhã:</a>
+            <ol>
+                <li>1 Copo de Suco batido no liquidificador (1 fatia de abacaxi + 1 punhado de hortelã fresca + 1 colher de chá de semente de linhaça)</li>
+            </ol>
+    </div>
+    <div class="item item-text-wrap">
+            <a class="mark">Almoço:</a>
+            <ol>
+                <li>1 Prato de Sopa (agrião + alho-poro + cenoura + nabo + peito de frango desfiado + macarrão estrelinha)</li>
+            </ol>
+    </div>
+    <div class="item item-text-wrap">
+            <a class="mark">Café da Tarde:</a>
+            <ol>
+                <li>2 Castanhas do pará</li>
+            </ol>
+    </div>
+    <div class="item item-text-wrap">
+            <a class="mark">Jantar:</a>
+            <ol>
+                <li>1 Prato de Sopa (chicória + brócolis + batata doce + abobrinha + carne moída + macarrãozinho integral)</li>
+                <li>1 Fatia de Melancia</li>
+            </ol>
+    </div>
+    <div class="item item-text-wrap">
+            <a class="mark">Ceia:</a>
+            <ol>
+                <li>1 Xícara de chá de <erva-doce></erva-doce></li>
+            </ol>
+    </div>
+    </div>
+</div>
+<a href="dietas.html" class="button icon-left ion-chevron-left button-clear button-dark text2">Back</a>
+    </ion-content>
+  </body>
+</html>

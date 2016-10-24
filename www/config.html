@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+    <ion-side-menus>
+    <ion-side-menu-content>
+      <ion-header-bar class="bar-positive">
+          <div class="buttons">
+              <button class="button icon button-clear ion-navicon-round" ng-click="toggleLeft()"></button>
+          </div>
+        <h1 class="title">Configurações</h1>
+      </ion-header-bar>
+      <ion-content>
+          <ul class="list">
+
+  <li class="item item-toggle">
+     Notificações
+     <label class="toggle toggle-positive">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+<li class="item item-toggle">
+     E-mail
+     <label class="toggle toggle-positive">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+</ul>
+<br>    
+<button class="button button-full button-positive">
+  Sair
+</button>
+</ion-content>
+      </ion-side-menu-content>
+            <ion-side-menu side="left">
+              <ion-list>
+                  <ion-item><a href="index.html">Home</a></ion-item>
+              </ion-list>
+              <ion-list>
+                  <ion-item>Perfil</ion-item>
+              </ion-list>
+              <ion-list>
+                  <ion-item><a href="info.html">Informações</a></ion-item>
+              </ion-list>
+              <ion-list>
+                  <ion-item><a href="dietas.html">Dietas</a></ion-item>
+              </ion-list>
+              <ion-list>
+                  <ion-item><a href="sobre.html">Sobre</a></ion-item>
+              </ion-list>
+              <ion-list>
+                  <ion-item><a href="config.html">Configurações</a></ion-item>
+              </ion-list>
+            </ion-side-menu>
+      </ion-side-menus>
+    </ion-pane>
+  </body>
+</html>
