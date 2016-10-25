@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <script src="lib/ionic-ion-header-shrink/ionic.headerShrink.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+    <ion-side-menus>
+    <ion-side-menu-content>
+      <ion-header-bar class="bar-positive">
+          <div class="buttons">
+              <button class="button icon button-clear ion-navicon-round" menu-toggle="left"></button>
+          </div>
+        <h1 class="title">Perfil</h1>
+      </ion-header-bar>   
+      <div class="list card">
+
+  <div class="item item-avatar">
+    <img src="lucas.jpg">
+    <br><br>
+    <h2>João da Silva</h2>
+    <p>Junho 21, 1995</p>
+  </div>
+
+  <div class="item item-body">
+    <img class="full-image" src="lucas.jpg">
+    <p>
+      Eu gosto muito de praticar esportes e também gosto de me dedicar à fazer dietas.
+      Mantenho uma dieta rígida e trabalho como personal trainer, gosto de ajudar as pessoas!!
+    </p>
+    <p>
+      <a href="#" class="subdued">1 Like</a>
+      <a href="#" class="subdued">5 Comments</a>
+    </p>
+  </div>
+
+</div>             
+  <br>
+  <br>
+  <br>
+  <!-- Footer (barra em baixo) -->
+  <div class="bar bar-footer bar-calm">
+</div>
+</label>
+    </ion-content>
+      </ion-side-menu-content>  
+            <!-- Menu na esquerda -->
+            <ion-side-menu side="left">
+              <ion-list>
+                  <ion-item><a href="home.html">Home</a></ion-item>
+              </ion-list>
+              <ion-list>
+                   <ion-item><a href="perfil.html">Perfil</a></ion-item>
+              </ion-list>
+              <ion-list>
+                  <ion-item><a href="info.html">Informações</a></ion-item>
+              </ion-list>
+              <ion-list>
+                  <ion-item><a href="dietas.html">Dietas</a></ion-item>
+              </ion-list>
+              <ion-list>
+                  <ion-item><a href="sobre.html">Sobre</a></ion-item>
+              </ion-list>
+              <ion-list>
+                  <ion-item><a href="config.html">Configurações</a></ion-item>
+              </ion-list>
+            </ion-side-menu>
+      </ion-side-menus>
+  </body>
+</html>
