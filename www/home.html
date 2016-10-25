@@ -37,52 +37,73 @@
     <ion-side-menu-content>
       <ion-header-bar class="bar-positive">
           <div class="buttons">
-              <button class="button icon button-clear ion-navicon-round" ng-click="toggleLeft()"></button>
+              <button class="button icon button-clear ion-navicon-round" ng-click='toggleLeft()'></button>
           </div>
-        <h1 class="title">Sobre</h1>
+        <h1 class="title">Dietas Já</h1>
       </ion-header-bar>
       <ion-content>
-          <div class="list card">
+    <h1 class="titu">Refeições do dia:</h1>
 
-  <div class="item item-avatar">
-    <img src="mcfly.png">
-    <h2>Dietas Já!</h2>
-    <a class="version">Versão 0.0.1</a>
+     <!-- cards com as refeições -->
+
+    <div class="card">
+  <div class="item item-divider">
+    Café da manhã
   </div>
-
-  <div class="item item-body">
-    <img class="penis" src="logo.png">
-    <p>
-        Desenvolvido por:
-    </p>
-    <div class="list">
-    <div class="item item-avatar">
-        <img src="vitor.jpeg">
-    <a class="genio">Vitor Chicarelli Nunes</a>
-    <p>Aluno do curso de Sistemas de Informação pela PUCCAMP</p>
-    </div>
-    <br>
-    <div class="item item-avatar">
-        <img src="igor.jpg">
-    <a class="genio">Igor Cardoso Sambonovich</a>
-    <p>Aluno do curso de Sistemas de Informação pela PUCCAMP</p>
-    </div>
-    <br>
-    <div class="item item-avatar">
-        <img src="lucas.jpg">
-    <a class="genio">Lucas Silva Eliseu</a>
-    <p>Aluno do curso de Sistemas de Informação pela PUCCAMP</p>
-    </div>
-    </div>
-    <p>
-      <a href="#" class="subdued">1 Like</a>
-      <a href="#" class="subdued">5 Comments</a>
-    </p>
+  <div class="item item-text-wrap">
+    <p>Pão francês: 1 unidade  -  100 calorias</p>
+    <p>Queijo prato: 2 fatias  -   50 calorias</p>
+    <p>Leite desnatado: 250ml  -  100 calorias</p>
   </div>
-
 </div>
-</ion-content>
-      </ion-side-menu-content>
+
+ <div class="card">
+  <div class="item item-divider">
+    Almoço
+  </div>
+  <div class="item item-text-wrap">
+    <p>Lasanha: 2 unidades  -  200 calorias</p>
+    <p>Coca cola: 350ml  -  150 calorias</p >
+  </div>
+</div>
+
+ <div class="card">
+  <div class="item item-divider">
+    Janta
+  </div>
+  <div class="item item-text-wrap">
+    <p>Breja: 1 litro</p>
+    <p>Amendoim: 100 gramas</p>
+  </div>
+</div>
+
+<div class="card">
+  <div class="item item-divider">
+    Ceia
+  </div>
+  <div class="item item-text-wrap">
+    <p>Breja: 1 litro</p>
+    <p>Amendoim: 100 gramas</p>
+  </div>
+</div>
+
+<div class="card">
+  <div class="item item-divider">
+    Lanche da madruga
+  </div>
+  <div class="item item-text-wrap">
+    <p>Breja: 1 litro</p>
+    <p>Amendoim: 100 gramas</p>
+  </div>
+</div>
+
+<br>
+<br>
+     <!-- cards com as refeições -->
+
+    </ion-content>
+      </ion-side-menu-content>  
+            <!-- Menu na esquerda -->
             <ion-side-menu side="left">
               <ion-list>
                   <ion-item><a href="home.html">Home</a></ion-item>
@@ -94,7 +115,7 @@
                   <ion-item><a href="info.html">Informações</a></ion-item>
               </ion-list>
               <ion-list>
-                  <ion-item>Dietas</ion-item>
+                  <ion-item><a href="dietas.html">Dietas</a></ion-item>
               </ion-list>
               <ion-list>
                   <ion-item><a href="sobre.html">Sobre</a></ion-item>
@@ -104,6 +125,22 @@
               </ion-list>
             </ion-side-menu>
       </ion-side-menus>
-    </ion-pane>
+
+
+<div class="tabs tabs-icon-top">
+  <a class="tab-item">
+    <i class="icon ion-home"></i>
+    Home
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-pizza"></i>
+   Dietas
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-earth"></i>
+    Feed
+  </a>
+</div>
+
   </body>
 </html>
