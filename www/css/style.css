@@ -90,3 +90,7 @@ ion-content {
 fontezica:link {
     color: darkblue;
 }
+
+ion-floating-button {
+    bottom:40px;
+}
