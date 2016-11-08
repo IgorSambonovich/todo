@@ -95,3 +95,27 @@ ion-floating-button {
     bottom:40px;
 }
 
+ .scroll-content {
+    background:dodgerblue;
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:auto;
+    opacity:0.6;
+
+
+  }
+
+  .google_button {
+      padding-left: 10cm;
+      padding-right: 10cm;
+      width: 80%;
+      
+  }
+
+  .fotona{
+width:100px;
+height:100px;
+
+  }
