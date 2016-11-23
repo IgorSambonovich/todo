@@ -6,6 +6,7 @@
 angular.module('starter', ['ionic','ionic.ion.headerShrink', 'ion-floating-menu'])
 
 
+
 app.controller('MainCtrl', function($scope, $ionicSideMenuDelegate) {
     $scope.abreEsq  = function() {
     $ionicSideMenuDelegate.toggleLeft()

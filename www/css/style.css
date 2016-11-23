@@ -72,12 +72,12 @@ ion-content {
   top: 0 !important;
 }
 
-.fundoMenu {
+/* .fundoMenu {
     background-color:powderblue;
     border-style: solid;
     border-width: 1px;
     border-color: black;    
-}
+} */
 
 .fontezica {
     color: darkblue;
@@ -95,7 +95,7 @@ ion-floating-button {
     bottom:40px;
 }
 
- .scroll-content {
+ /*.scroll-content {
     background:dodgerblue;
     position:absolute;
     left:0;
@@ -105,7 +105,7 @@ ion-floating-button {
     opacity:0.6;
 
 
-  }
+  } */
 
   .google_button {
       padding-left: 10cm;

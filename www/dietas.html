@@ -34,6 +34,7 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script src="js/teste.js"></script>
   </head>
   <body ng-app="starter">
     <ion-side-menus>
@@ -50,26 +51,51 @@
     <h2 class="titu2">Aqui nós temos as dietas certa para você</h2>
     <br>
     <p class="p1">Primeiro passo é escolher uma dieta que te interessa!</p>
-    <div class="esq">
-    <a href="detox.html"><button class="button button-positive esq button-outline button-block">
-        Dieta Detox
-    </button>
-    </a>
+    <script>
+    function ($scope) {
+  $scope.emagrecer = false;
+  $scope.engordar = false;
+};
+    </script>
+    <div class="button-bar">
+    <button class="button button-energized" ng-click="emagrecer = false; engordar = false;">Mostrar Todos</button>
+    <button class="button button-energized" ng-click="emagrecer = false; engordar = true;">Dietas Para Emagrecer</button>
+    <button class="button button-energized" ng-click="emagrecer = true; engordar = false;">Dietas Para Ganhar Massa</button>
+    <button class="button button-energized" ng-click="emagrecer = true; engordar = true;">Esconder Todos </button>
     </div>
-    <div class="esq">
-    <button class="button button-positive esq button-outline button-block">
-        Dieta sem Feijão
-    </button>
-    </div>
-    <div class="esq">
-    <button class="button button-positive esq button-outline button-block">
-        Dieta sem glútem
-    </button>
-    </div>
-    <div class="esq">
-    <button class="button button-positive esq button-outline button-block">
-        Dieta muito boa!!!!!
-    </button>
+    <br>
+    <br>
+    <div class="list">
+        <a class="item item-thumbnail-left" href="detox.html" ng-if="!emagrecer">
+            <img src="detox.jpg">
+            <h2>Dieta Detox</h2>
+            <p>A Dieta Detox é composta de frutas, verduras, legumes, sucos e chás para purificar as células e acelerar o metabolismo e consequentemente o emagrecimento. Ela também possui baixas calorias, com poucos carboidratos e muito líquido.</p>
+        </a>
+        <a class="item item-thumbnail-left" href="detox.html" ng-if="!emagrecer">
+            <img src="sopa.jpg">
+            <h2>Dieta da Sopa</h2>
+            <p>Esta dieta costuma ser utilizada pelos famosos e por muitas mulheres, principalmente perto do verão e do carnaval por ter um efeito rápido para quem tem pressa em perder aqueles quilinhos a mais incomodando.</p>
+        </a>
+        <a class="item item-thumbnail-left" href="detox.html" ng-if="!emagrecer">
+            <img src="emagrecimento.jpg">
+            <h2>Dieta do Emagrecimento</h2>
+            <p>Esta dieta para emagrecer em 15 dias permite uma rápida perda de peso, podendo-se reduzir cerca de 5 Kg em apenas duas semanas e sem muito sacrifício.</p>
+        </a>
+        <a class="item item-thumbnail-left" href="detox.html" ng-if="!engordar">
+            <img src="turbinada.jpg">
+            <h2>Dieta Turbinada</h2>
+            <p>Você mantém a malhação em dia, mas ainda não conquistou os músculos que queria? Aposte nessa dieta turbinada, que ajuda você a ganhar massa magra e definição.</p>
+        </a>
+        <a class="item item-thumbnail-left" href="detox.html" ng-if="!engordar">
+            <img src="turbinada.jpg">
+            <h2>Dieta para Treino</h2>
+            <p>A dieta para aumentar a massa muscular se baseia em aumentar a quantidade de proteínas que se encontram em alimentos como peixe ou carne.</p>
+        </a>
+        <a class="item item-thumbnail-left" href="detox.html" ng-if="!engordar">
+            <img src="turbinada.jpg">
+            <h2>Dieta Massa magra</h2>
+            <p>O ganho de massa muscular se apoia em dois pilares, o primeiro sendo a atividade fisica e o outro a alimentação.</p>
+        </a>
     </div>
     </ion-content>
       </ion-side-menu-content>  

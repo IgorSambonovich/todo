@@ -1,9 +1,5 @@
-var app = angular.module('angularjs-starter', []);
+var app = angular.module('app', ['ionic']);
 
-app.controler('Controle', function($scope, $location, $anchorScroll){
-    $scope.scrollTo = function(id) {
-        $location.hash(id);
-        console.log($location.hash());
-        $anchorScroll;
-    };
+app.controller("MyController", function ($scope) {
+  $scope.show = true;
 });
