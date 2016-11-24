@@ -35,36 +35,51 @@
     <script src="js/controllers.js"></script>
     <script src="js/services.js"></script>
     <script src="js/constants.js"></script>
-	<script src="lib/ionic/js/ionic.bundle.js"></script>
-	<script src="js/ng-cordova.min.js"></script>
-	<script src="cordova.js"></script>
     <script src="lib/angular-mocks/angular-mocks.js"></script>
 
     <!-- google login-->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
   <body ng-app="starter" ng-controller="AppCtrl">
-<ion-view view-title="Login" align-title="left">
-    <ion-content style="background: url(img/login.jpg) center; background-size: cover;">
-        <div class="hero no-header flat">
-            <div class="content">
-                <div class="app-icon"></div>
-                <h1>Thronester</h1>
-            </div>
-        </div>
-        <div class="list">
-            <ion-md-input placeholder="Username" highlight-color="balanced" type="text"></ion-md-input>
-            <ion-md-input placeholder="Password" highlight-color="energized" type="password"></ion-md-input>
-        </div>
-        <div class="padding">
-            <button ui-sref="app.profile" class="button button-full button-assertive ink">Login</button>
-        </div>
-        <div class="button-bar social-login">
-            <button class="button button-small button-border icon-left ion-social-google button-assertive-900">Google+</button>
-            <button class="button button-small button-border icon-left ion-social-twitter button-calm-900">Twitter</button>
-            <button class="button button-small button-border icon-left ion-social-facebook button-positive-900">Facebook</button>
-        </div>
-    </ion-content>
-</ion-view>
+    <script>
+      function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail());
+  localStorage.setItem("Name", profile.getName());
+  localStorage.setItem("Foto", profile.getImageUrl());
+}
+    </script>
+    <ion-nav-bar class="bar-balanced">
+    </ion-nav-bar>
+    <ion-nav-view>
+    </ion-nav-view>
+    <ion-pane>
+      <ion-content>
+        <br><BR>
+        <h1 align="center">DietasJa!</h1>
+        <br><br><BR><BR><BR><BR>
+          <label class="item item-input">
+  <span class="input-label">Email</span>
+  <input type="text">
+</label>
+<label class="item item-input">
+  <span class="input-label">Senha</span>
+  <input type="password">
+</label>
+
+<div class="botaoLogin">
+ <a href="home.html"><button class="button button-block button-positive">
+ Login
+</button></a>
+</div>
+
+<div class="g-signin2 google_button" data-onsuccess="onSignIn"></div>
+
+      </ion-content>
+    </ion-pane>
+
   </body>
 </html>
