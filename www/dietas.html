@@ -39,7 +39,7 @@
   <body ng-app="starter">
     <ion-side-menus>
     <ion-side-menu-content>
-      <ion-header-bar class="bar-positive">
+      <ion-header-bar class="bar-energized">
           <div class="buttons">
               <button class="button icon button-clear ion-navicon-round" menu-toggle="left"></button>
           </div>
@@ -58,40 +58,39 @@
 };
     </script>
     <div class="button-bar">
-    <button class="button button-energized" ng-click="emagrecer = false; engordar = false;">Mostrar Todos</button>
-    <button class="button button-energized" ng-click="emagrecer = false; engordar = true;">Dietas Para Emagrecer</button>
-    <button class="button button-energized" ng-click="emagrecer = true; engordar = false;">Dietas Para Ganhar Massa</button>
-    <button class="button button-energized" ng-click="emagrecer = true; engordar = true;">Esconder Todos </button>
+    <button class="button accent-color divider-color" ng-click="emagrecer = false; engordar = false;"><a class="secondary-text-color">Todas</a></button>
+    <button class="button accent-color divider-color" ng-click="emagrecer = false; engordar = true;"><a class="secondary-text-color">Emagrecer</a></button>
+    <button class="button accent-color divider-color" ng-click="emagrecer = true; engordar = false;"><a class="secondary-text-color">Massa</a></button>
     </div>
     <br>
     <br>
     <div class="list">
-        <a class="item item-thumbnail-left" href="detox.html" ng-if="!emagrecer">
+        <a class="item item-thumbnail-left divider-color" href="detox.html" ng-if="!emagrecer">
             <img src="detox.jpg">
             <h2>Dieta Detox</h2>
             <p>A Dieta Detox é composta de frutas, verduras, legumes, sucos e chás para purificar as células e acelerar o metabolismo e consequentemente o emagrecimento. Ela também possui baixas calorias, com poucos carboidratos e muito líquido.</p>
         </a>
-        <a class="item item-thumbnail-left" href="detox.html" ng-if="!emagrecer">
+        <a class="item item-thumbnail-left divider-color" href="detox.html" ng-if="!emagrecer">
             <img src="sopa.jpg">
             <h2>Dieta da Sopa</h2>
             <p>Esta dieta costuma ser utilizada pelos famosos e por muitas mulheres, principalmente perto do verão e do carnaval por ter um efeito rápido para quem tem pressa em perder aqueles quilinhos a mais incomodando.</p>
         </a>
-        <a class="item item-thumbnail-left" href="detox.html" ng-if="!emagrecer">
+        <a class="item item-thumbnail-left divider-color" href="detox.html" ng-if="!emagrecer">
             <img src="emagrecimento.jpg">
             <h2>Dieta do Emagrecimento</h2>
             <p>Esta dieta para emagrecer em 15 dias permite uma rápida perda de peso, podendo-se reduzir cerca de 5 Kg em apenas duas semanas e sem muito sacrifício.</p>
         </a>
-        <a class="item item-thumbnail-left" href="detox.html" ng-if="!engordar">
+        <a class="item item-thumbnail-left divider-color" href="detox.html" ng-if="!engordar">
             <img src="turbinada.jpg">
             <h2>Dieta Turbinada</h2>
             <p>Você mantém a malhação em dia, mas ainda não conquistou os músculos que queria? Aposte nessa dieta turbinada, que ajuda você a ganhar massa magra e definição.</p>
         </a>
-        <a class="item item-thumbnail-left" href="detox.html" ng-if="!engordar">
+        <a class="item item-thumbnail-left divider-color" href="detox.html" ng-if="!engordar">
             <img src="turbinada.jpg">
             <h2>Dieta para Treino</h2>
             <p>A dieta para aumentar a massa muscular se baseia em aumentar a quantidade de proteínas que se encontram em alimentos como peixe ou carne.</p>
         </a>
-        <a class="item item-thumbnail-left" href="detox.html" ng-if="!engordar">
+        <a class="item item-thumbnail-left divider-color" href="detox.html" ng-if="!engordar">
             <img src="turbinada.jpg">
             <h2>Dieta Massa magra</h2>
             <p>O ganho de massa muscular se apoia em dois pilares, o primeiro sendo a atividade fisica e o outro a alimentação.</p>
@@ -102,22 +101,12 @@
             <!-- Menu na esquerda -->
             <ion-side-menu side="left">
               <ion-list>
-                  <ion-item><a href="home.html">Home</a></ion-item>
-              </ion-list>
-              <ion-list>
-                 <ion-item><a href="perfil.html">Perfil</a></ion-item>
-              </ion-list>
-              <ion-list>
-                  <ion-item><a href="info.html">Informações</a></ion-item>
-              </ion-list>
-              <ion-list>
-                  <ion-item><a href="dietas.html">Dietas</a></ion-item>
-              </ion-list>
-              <ion-list>
-                  <ion-item><a href="sobre.html">Sobre</a></ion-item>
-              </ion-list>
-              <ion-list>
-                  <ion-item><a href="config.html">Configurações</a></ion-item>
+                 <ion-item><a class="primary-text-color" href="home.html">Home</a></ion-item>
+                  <ion-item><a class="primary-text-color" href="perfil.html">Perfil</a></ion-item>
+                  <ion-item><a class="primary-text-color" href="info.html">Informações</a></ion-item>
+                  <ion-item><a class="primary-text-color" href="dietas.html">Dietas</a></ion-item>
+                  <ion-item><a class="primary-text-color" href="sobre.html">Sobre</a></ion-item>
+                  <ion-item><a class="primary-text-color" href="config.html">Configurações</a></ion-item>
               </ion-list>
             </ion-side-menu>
       </ion-side-menus>

@@ -1,31 +1,23 @@
 /* Empty. Add your own CSS if you like */
 .titu {
     text-align: center;
-    font-family: Papyrus, fantasy, 'Arial Narrow Bold';
-    color: dodgerblue;
     font-size: 30px;
     padding-top: 15px;
 }
 
 .titu2 {
     text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: dodgerblue;
     font-size: 15px;
 }
 
 .p1 {
     text-align: center;
-    color: dodgerblue;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 15px;
 }
 
 .txt {
     text-align: left;
     padding-left: 25px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: dodgerblue;
     font-size: 20px;
 }
 
@@ -36,10 +28,9 @@
     height: 350px;
 }
 
-.genio {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+/*.genio {
     color: darkblue;
-}
+}*/
 
 .version {
     font-style: oblique;
@@ -56,7 +47,6 @@
 }
 
 .mark {
-    color: darkblue;
     font-style: italic;
 }
 
@@ -72,14 +62,7 @@ ion-content {
   top: 0 !important;
 }
 
-/* .fundoMenu {
-    background-color:powderblue;
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;    
-} */
-
-.fontezica {
+/*.fontezicaaaaaa {
     color: darkblue;
     font-family: Rockwell, fantasy;
     font-size: 18px;
@@ -89,25 +72,13 @@ ion-content {
 
 fontezica:link {
     color: darkblue;
-}
+}*/
 
 ion-floating-button {
     bottom:40px;
 }
 
- /*.scroll-content {
-    background:dodgerblue;
-    position:absolute;
-    left:0;
-    top:0;
-    width:100%;
-    height:auto;
-    opacity:0.6;
-
-
-  } */
-
-  .google_button {
+.google_button {
       padding-left: 10cm;
       padding-right: 10cm;
       width: 80%;
@@ -119,3 +90,23 @@ width:100px;
 height:100px;
 
   }
+
+.dark-primary-color    { background: #FBC02D; }
+
+.default-primary-color { background: #FFEB3B; }
+
+.light-primary-color   { background: #FFF9C4; }
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+.ion-navicon-round { color: white;}
+.text-primary-color  { color: #212121; }
+
+.accent-color          { background: #FFC107; }
+
+.primary-text-color    { color: #212121; }
+
+.secondary-text-color  { color: #757575; }
+
+.divider-color         { border-color: #BDBDBD; }

@@ -38,7 +38,7 @@
   <body ng-app="starter">
     <ion-side-menus>
     <ion-side-menu-content>
-      <ion-header-bar class="bar-positive">
+      <ion-header-bar class="bar-energized">
           <div class="buttons">
               <button class="button icon button-clear ion-navicon-round" menu-toggle="left"></button>
           </div>
@@ -60,45 +60,38 @@
       <option>Outro</option>
     </select>
   </label>
+  <script>
+  function($scope){
+  
+  $scope.myList = [
+{name:'Lactose'},
+{name:'Glútem'},{name:"Diabetes"},{name:'Hipertensão'},{name:'Alergia'}
+];
+
+};
+  </script>
   <!-- Checkbox com as restrições -->
   <label class="item item-output item-select">
       <div class="input-label">
-          Restrições
+          <a class="primary-text-color">Restrições</a>
       </div>
   <ion-checkbox>Lactose</ion-checkbox>
   <ion-checkbox>Glútem</ion-checkbox>
   <ion-checkbox>Diabetes</ion-checkbox>
   <ion-checkbox>Hipertensão</ion-checkbox>
   <ion-checkbox>Alergia</ion-checkbox>
-  <br>
-  <br>
-  <br>
-  <!-- Footer (barra em baixo) -->
-  <div class="bar bar-footer bar-calm">
-  <div class="title">Melhor aplicativo de Dietas!</div>
-</div>
 </label>
     </ion-content>
       </ion-side-menu-content>  
             <!-- Menu na esquerda -->
             <ion-side-menu side="left">
               <ion-list>
-                  <ion-item><a href="home.html">Home</a></ion-item>
-              </ion-list>
-              <ion-list>
-                  <ion-item><a href="perfil.html">Perfil</a></ion-item>
-              </ion-list>
-              <ion-list>
-                  <ion-item><a href="info.html">Informações</a></ion-item>
-              </ion-list>
-              <ion-list>
-                  <ion-item><a href="dietas.html">Dietas</a></ion-item>
-              </ion-list>
-              <ion-list>
-                  <ion-item><a href="sobre.html">Sobre</a></ion-item>
-              </ion-list>
-              <ion-list>
-                  <ion-item><a href="config.html">Configurações</a></ion-item>
+                 <ion-item><a class="primary-text-color" href="home.html">Home</a></ion-item>
+                  <ion-item><a class="primary-text-color" href="perfil.html">Perfil</a></ion-item>
+                  <ion-item><a class="primary-text-color" href="info.html">Informações</a></ion-item>
+                  <ion-item><a class="primary-text-color" href="dietas.html">Dietas</a></ion-item>
+                  <ion-item><a class="primary-text-color" href="sobre.html">Sobre</a></ion-item>
+                  <ion-item><a class="primary-text-color" href="config.html">Configurações</a></ion-item>
               </ion-list>
             </ion-side-menu>
       </ion-side-menus>
