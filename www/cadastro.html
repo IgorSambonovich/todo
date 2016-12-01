@@ -40,15 +40,12 @@
     <!-- google login-->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
-  <body ng-app="starter" ng-controller="AppCtrl" onload="initialize()">
+  <body ng-app="starter" ng-controller="AppCtrl">
   <script>
-  		function initialize(){
 		usuariosBD = localStorage.getItem("usuarios");
 		usuariosBD = JSON.parse(usuariosBD);
 		senhasBD = localStorage.getItem("senhas");
 		senhasBD = JSON.parse(senhasBD);
-		console.log(usuariosBD[0]);
-      }
   
   function cadastrar(){
 	email = document.getElementById("email").value;
@@ -81,6 +78,10 @@
 		}
 	}
   }
+  
+  function voltar(){
+	window.location = "/index.html";
+  }
   </script>
     <ion-nav-bar class="bar-balanced">
     </ion-nav-bar>
@@ -111,6 +112,10 @@
  <a href="javascript:cadastrar()"><button class="button button-block button-energized">
  Cadastrar
 </button></a>
+</div>
+
+<div align="center" id="botaoVoltar">
+<button onclick="voltar()">Voltar</button>
 </div>
 
 <div id="msg" align="center">

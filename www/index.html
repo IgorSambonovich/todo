@@ -42,17 +42,41 @@
   </head>
   <body ng-app="starter" ng-controller="AppCtrl" onload="initialize()">
     <script>
+		usuariosBD = localStorage.getItem("usuarios");
+		usuariosBD = JSON.parse(usuariosBD);
+		senhasBD = localStorage.getItem("senhas");
+		senhasBD = JSON.parse(senhasBD);
+		
+		
 		function initialize(){
 		var usuarios = ["archerspk@gmail.com", "igor.sambonovich@gmail.com", "chicarellivitor@gmail.com"];
 		var senhas = ["admin", "admin", "admin"];
 		localStorage.setItem("usuarios", JSON.stringify(usuarios));
 		localStorage.setItem("senhas", JSON.stringify(senhas));
-		usuariosBD = localStorage.getItem("usuarios");
-		usuariosBD = JSON.parse(usuariosBD);
-		senhasBD = localStorage.getItem("senhas");
-		senhasBD = JSON.parse(senhasBD);
 		console.log(usuariosBD[0]);
+		console.log(senhasBD[0]);
       }
+	  
+	  
+	  function login(){
+	  ok=false;
+	  email = document.getElementById("email").value;
+	  senha = document.getElementById("senha").value;
+	  	for(i=0; i<usuariosBD.length; i++){
+			if(email==usuariosBD[i])
+			{
+				if(senha==senhasBD[i])
+				{
+				ok=true;
+				window.location = "/home.html";
+				}
+			}
+		}
+		if(!ok)
+		{
+			document.getElementById("msg").innerHTML = "Email ou senha incorretos.";
+		}
+	 }
 		
 	
       function onSignIn(googleUser) {
@@ -79,17 +103,17 @@
         <br><br><BR><BR><BR><BR>
           <label class="item item-input">
   <span class="input-label">Email</span>
-  <input type="text">
+  <input type="text" id="email">
 </label>
 <label class="item item-input">
   <span class="input-label">Senha</span>
-  <input type="password">
+  <input type="password" id="senha">
 </label>
 
 <div class="botaoLogin">
- <a href="home.html"><button class="button button-block button-energized">
+<button class="button button-block button-energized" onclick="login()">
  Login
-</button></a>
+</button>
 </div>
 
 <div align="center" class="g-signin2 google_button" data-onsuccess="onSignIn"></div>
@@ -97,6 +121,10 @@
 
 <div id="cadastro">
 <p align="center">Ainda não possui um cadastro? Clique <a href="cadastro.html">aqui.</a></p>
+</div>
+
+<br>
+<div id="msg" align="center">
 </div>
 
       </ion-content>
