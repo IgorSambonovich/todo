@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="google-signin-client_id" content="521159186929-eq51i4dl8odpko0eco6tprn3j4cj1aej.apps.googleusercontent.com">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/constants.js"></script>
+    <script src="lib/angular-mocks/angular-mocks.js"></script>
+
+    <!-- google login-->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
+  <body ng-app="starter" ng-controller="AppCtrl">
+  <script>
+  function cadastrar(){
+	email = document.getElementById("email").value;
+	senha1 = document.getElementById("senha1").value;
+	senha2 = document.getElementById("senha2").value;
+	if(senha1==senha2){
+		console.log("senhas iguais");
+	}
+  }
+  </script>
+    <ion-nav-bar class="bar-balanced">
+    </ion-nav-bar>
+    <ion-nav-view>
+    </ion-nav-view>
+    <ion-pane>
+      <ion-content>
+        <div class="dark-primary-color">
+        <br><BR>
+        <h1 align="center" class="text-primary-color">DietasJa!</h1>
+        <br><br><br>
+        </div>
+        <br><br><BR><BR><BR><BR>
+          <label class="item item-input">
+  <span class="input-label">Seu email:</span>
+  <input type="text" id="email">
+</label>
+<label class="item item-input">
+  <span class="input-label">Senha desejada:</span>
+  <input type="password" id="senha1">
+</label>
+<label class="item item-input">
+  <span class="input-label">Confirme sua senha:</span>
+  <input type="password" id="senha2">
+</label>
+
+<div class="botaoLogin">
+ <a href="javascript:cadastrar()"><button class="button button-block button-energized">
+ Cadastrar
+</button></a>
+</div>
+
+
+
+      </ion-content>
+    </ion-pane>
+
+  </body>
+</html>
