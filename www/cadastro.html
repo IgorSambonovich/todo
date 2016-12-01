@@ -40,14 +40,45 @@
     <!-- google login-->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
-  <body ng-app="starter" ng-controller="AppCtrl">
+  <body ng-app="starter" ng-controller="AppCtrl" onload="initialize()">
   <script>
+  		function initialize(){
+		usuariosBD = localStorage.getItem("usuarios");
+		usuariosBD = JSON.parse(usuariosBD);
+		senhasBD = localStorage.getItem("senhas");
+		senhasBD = JSON.parse(senhasBD);
+		console.log(usuariosBD[0]);
+      }
+  
   function cadastrar(){
 	email = document.getElementById("email").value;
 	senha1 = document.getElementById("senha1").value;
 	senha2 = document.getElementById("senha2").value;
-	if(senha1==senha2){
-		console.log("senhas iguais");
+	usuariosBD = localStorage.getItem("usuarios");
+	usuariosBD = JSON.parse(usuariosBD);
+	senhasBD = localStorage.getItem("senhas");
+	senhasBD = JSON.parse(senhasBD);
+	ok = true;
+	
+	for(i=0; i<usuariosBD.length; i++){
+		if(email==usuariosBD[i])
+		{
+			ok=false;
+			document.getElementById("msg").innerHTML = "Email já cadastrado.";
+		}
+	}
+	if(ok){
+		if(senha1==senha2 && senha1!=null && senha2!=null){
+		usuariosBD.push(email);
+		senhasBD.push(senha1);
+		localStorage.setItem("usuarios", JSON.stringify(usuariosBD));
+		localStorage.setItem("senhas", JSON.stringify(senhasBD));
+		document.getElementById("msg").innerHTML = "Email cadastrado com sucesso.";
+		console.log(usuariosBD);
+		}
+		else{
+		document.getElementById("msg").innerHTML = "Senhas diferentes, favor verificar.";
+		}
 	}
   }
   </script>
@@ -80,6 +111,9 @@
  <a href="javascript:cadastrar()"><button class="button button-block button-energized">
  Cadastrar
 </button></a>
+</div>
+
+<div id="msg" align="center">
 </div>
 
 
