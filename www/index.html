@@ -40,8 +40,21 @@
     <!-- google login-->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
-  <body ng-app="starter" ng-controller="AppCtrl">
+  <body ng-app="starter" ng-controller="AppCtrl" onload="initialize()">
     <script>
+		function initialize(){
+		var usuarios = ["archerspk@gmail.com", "igor.sambonovich@gmail.com", "chicarellivitor@gmail.com"];
+		var senhas = ["admin", "admin", "admin"];
+		localStorage.setItem("usuarios", JSON.stringify(usuarios));
+		localStorage.setItem("senhas", JSON.stringify(senhas));
+		usuariosBD = localStorage.getItem("usuarios");
+		usuariosBD = JSON.parse(usuariosBD);
+		senhasBD = localStorage.getItem("senhas");
+		senhasBD = JSON.parse(senhasBD);
+		console.log(usuariosBD[0]);
+      }
+		
+	
       function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
   console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
@@ -79,7 +92,12 @@
 </button></a>
 </div>
 
-<div class="g-signin2 google_button" data-onsuccess="onSignIn"></div>
+<div align="center" class="g-signin2 google_button" data-onsuccess="onSignIn"></div>
+<br>
+
+<div id="cadastro">
+<p align="center">Ainda não possui um cadastro? Clique <a href="cadastro.html">aqui.</a></p>
+</div>
 
       </ion-content>
     </ion-pane>
