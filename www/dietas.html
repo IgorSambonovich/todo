@@ -99,14 +99,30 @@
     </ion-content>
       </ion-side-menu-content>  
             <!-- Menu na esquerda -->
-            <ion-side-menu side="left">
+            <script>
+      function initialize(){
+      document.getElementById("nome_perfil").innerHTML = "<h1>" + localStorage.getItem("Name") + "</h1>";
+      document.getElementById("nome_perfil2").innerHTML = "<h2>" + localStorage.getItem("Name") + "</h2>";
+      document.getElementById("foto").src = localStorage.getItem("Foto");
+      document.getElementById("foto2").src = localStorage.getItem("Foto");
+      }
+    </script>
+
+            <ion-side-menu class="light-primary-color" side="left">
+              <div class="item item-avatar dark-primary-color divider-color">
+                <img align="center" id="foto2" src="">
+                <br>
+                <div align="center" id="nome_perfil2">
+                </div>
+              </div>
+              <div class="card light-primary-color">
               <ion-list>
-                 <ion-item><a class="primary-text-color" href="home.html">Home</a></ion-item>
-                  <ion-item><a class="primary-text-color" href="perfil.html">Perfil</a></ion-item>
-                  <ion-item><a class="primary-text-color" href="info.html">Informações</a></ion-item>
-                  <ion-item><a class="primary-text-color" href="dietas.html">Dietas</a></ion-item>
-                  <ion-item><a class="primary-text-color" href="sobre.html">Sobre</a></ion-item>
-                  <ion-item><a class="primary-text-color" href="config.html">Configurações</a></ion-item>
+                  <ion-item class="teeste"><a class="primary-text-color" href="home.html">Home</a></ion-item>
+                  <ion-item class="teeste"><a class="primary-text-color" href="perfil.html">Perfil</a></ion-item>
+                  <ion-item class="teeste"><a class="primary-text-color" href="info.html">Informações</a></ion-item>
+                  <ion-item class="teeste"><a class="primary-text-color" href="dietas.html">Dietas</a></ion-item>
+                  <ion-item class="teeste"><a class="primary-text-color" href="sobre.html">Sobre</a></ion-item>
+                  <ion-item class="teeste"><a class="primary-text-color" href="config.html">Configurações</a></ion-item>
               </ion-list>
             </ion-side-menu>
       </ion-side-menus>
