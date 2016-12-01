@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', ['ionic','ionic.ion.headerShrink', 'ion-floating-menu'])
-
+angular.module('dietasja', ['backand'])
 
 
 app.controller('MainCtrl', function($scope, $ionicSideMenuDelegate) {
@@ -49,8 +49,76 @@ app.config(function($stateProvider) {
     })
 })
 
+.config(function (BackandProvider) {
+  BackandProvider.setAppName('dietasja');
+  BackandProvider.setAnonymousToken('0150a110-2d07-4122-a227-a5653cae8448');
+})
+
+.controller('AppCtrl', function($scope, TodoService) {
+  $scope.todos = [];
+  $scope.input = {};
+ 
+  function getAllTodos() {
+    TodoService.getTodos()
+    .then(function (result) {
+      $scope.todos = result.data.data;
+    });
+  }
+ 
+  $scope.addTodo = function() {
+    TodoService.addTodo($scope.input)
+    .then(function(result) {
+      $scope.input = {};
+      // Reload our todos, not super cool
+      getAllTodos();
+    });
+  }
+ 
+  $scope.deleteTodo = function(id) {
+    TodoService.deleteTodo(id)
+    .then(function (result) {
+      // Reload our todos, not super cool
+      getAllTodos();
+    });
+  }
+ 
+  getAllTodos();
+})
+
+.service('TodoService', function ($http, Backand) {
+  var baseUrl = '/1/objects/';
+  var objectName = 'todos/';
+ 
+  function getUrl() {
+    return Backand.getApiUrl() + baseUrl + objectName;
+  }
+ 
+  function getUrlForId(id) {
+    return getUrl() + id;
+  }
+ 
+  getTodos = function () {
+    return $http.get(getUrl());
+  };
+ 
+  addTodo = function(todo) {
+    return $http.post(getUrl(), todo);
+  }
+ 
+  deleteTodo = function (id) {
+    return $http.delete(getUrlForId(id));
+  };
+ 
+  return {
+    getTodos: getTodos,
+    addTodo: addTodo,
+    deleteTodo: deleteTodo
+  }
+});
+
 function MyCtrl($scope, $ionicHistory) {
   $scope.myGoBack = function() {
     $ionicHistory.goBack();
   };
 }
+
