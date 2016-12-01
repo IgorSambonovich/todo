@@ -37,7 +37,13 @@
     <script src="js/app.js"></script>
 
   </head>
-  <body ng-app="starter">
+  <body ng-app="starter" onload="initialize()">
+    <script>
+        function initialize(){
+      document.getElementById("nome_perfil2").innerHTML = "<h2>" + localStorage.getItem("Name") + "</h2>";
+      document.getElementById("foto2").src = localStorage.getItem("Foto");
+      }
+    </script>
 
 
      <!-- <ion-floating-button click="myEvent()" has-footer="false" button-color="#03A9F4" icon="ion-plus" iconColor="#fff">
@@ -67,9 +73,9 @@
     <a class="primary-text-color">Café da manhã</a>
   </div>
   <div class="item item-text-wrap light-primary-color">
-    <p class="secondary-text-color">Pão francês: 1 unidade  -  100 calorias</p>
-    <p class="secondary-text-color">Queijo prato: 2 fatias  -   50 calorias</p>
-    <p class="secondary-text-color">Leite desnatado: 250ml  -  100 calorias</p>
+    <p class="secondary-text-color">Pão francês: 1 unidade</p>
+    <p class="secondary-text-color">Queijo prato: 2 fatias</p>
+    <p class="secondary-text-color">Leite desnatado: 250ml</p>
   </div>
 </div>
 
@@ -78,18 +84,19 @@
     <a class="primary-text-color">Almoço</a>
   </div>
   <div class="item item-text-wrap light-primary-color">
-    <p>Lasanha: 2 unidades  -  200 calorias</p>
-    <p>Coca cola: 350ml  -  150 calorias</p >
+    <p>Lasanha: 2 unidades</p>
+    <p>Coca cola: 1 unidade (350ml)</p >
   </div>
 </div>
 
  <div class="card">
   <div class="item item-divider default-primary-color">
-    Janta
+    Jantar
   </div>
   <div class="item item-text-wrap light-primary-color">
-    <p>Breja: 1 litro</p>
-    <p>Amendoim: 100 gramas</p>
+    <p>Frango grelhado: 1 unidade de 120 gramas</p>
+    <p>Salada de alface e tomate</p>
+    <p>Suco natural de laranja</p>
   </div>
 </div>
 
@@ -98,18 +105,18 @@
     Ceia
   </div>
   <div class="item item-text-wrap light-primary-color">
-    <p>Breja: 1 litro</p>
-    <p>Amendoim: 100 gramas</p>
+    <p>Pêra: 1 unidade</p>
+    <p>Iogurte de frutas vermelhas: 1 unidade (200ml)</p>
   </div>
 </div>
 
 <div class="card">
   <div class="item item-divider default-primary-color">
-    Lanche da madruga
+    Lanche da madrugada
   </div>
   <div class="item item-text-wrap light-primary-color">
-    <p>Breja: 1 litro</p>
-    <p>Amendoim: 100 gramas</p>
+    <p>Água</p>
+    <p>Maçã: 1 unidade</p>
   </div>
 </div>
 
@@ -120,33 +127,24 @@
     </ion-content>
       </ion-side-menu-content>  
             <!-- Menu na esquerda -->
-            <ion-side-menu side="left">
+
+            <ion-side-menu class="light-primary-color" side="left">
+              <div class="item item-avatar dark-primary-color divider-color">
+                <img align="center" id="foto2" src="">
+                <br>
+                <div align="center" id="nome_perfil2">
+                </div>
+              </div>
+              <div class="card light-primary-color">
               <ion-list>
-                  <ion-item><a class="primary-text-color" href="home.html">Home</a></ion-item>
-                  <ion-item><a class="primary-text-color" href="perfil.html">Perfil</a></ion-item>
-                  <ion-item><a class="primary-text-color" href="info.html">Informações</a></ion-item>
-                  <ion-item><a class="primary-text-color" href="dietas.html">Dietas</a></ion-item>
-                  <ion-item><a class="primary-text-color" href="sobre.html">Sobre</a></ion-item>
-                  <ion-item><a class="primary-text-color" href="config.html">Configurações</a></ion-item>
+                  <ion-item class="teeste"><a class="primary-text-color" href="home.html">Home</a></ion-item>
+                  <ion-item class="teeste"><a class="primary-text-color" href="perfil.html">Perfil</a></ion-item>
+                  <ion-item class="teeste"><a class="primary-text-color" href="info.html">Informações</a></ion-item>
+                  <ion-item class="teeste"><a class="primary-text-color" href="dietas.html">Dietas</a></ion-item>
+                  <ion-item class="teeste"><a class="primary-text-color" href="sobre.html">Sobre</a></ion-item>
+                  <ion-item class="teeste"><a class="primary-text-color" href="config.html">Configurações</a></ion-item>
               </ion-list>
             </ion-side-menu>
       </ion-side-menus>
-
-
-<div class="tabs tabs-icon-top">
-  <a class="tab-item">
-    <i class="icon ion-home"></i>
-    Home
-  </a>
-  <a class="tab-item">
-    <i class="icon ion-pizza"></i>
-   Dietas
-  </a>
-  <a class="tab-item">
-    <i class="icon ion-earth"></i>
-    Feed
-  </a>
-</div>
-
   </body>
 </html>

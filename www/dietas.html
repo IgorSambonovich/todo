@@ -36,7 +36,13 @@
     <script src="js/app.js"></script>
     <script src="js/teste.js"></script>
   </head>
-  <body ng-app="starter">
+  <body ng-app="starter" onload="initialize()">
+    <script>
+        function initialize(){
+      document.getElementById("nome_perfil2").innerHTML = "<h2>" + localStorage.getItem("Name") + "</h2>";
+      document.getElementById("foto2").src = localStorage.getItem("Foto");
+      }
+    </script>
     <ion-side-menus>
     <ion-side-menu-content>
       <ion-header-bar class="bar-energized">
@@ -70,28 +76,28 @@
             <h2>Dieta Detox</h2>
             <p>A Dieta Detox é composta de frutas, verduras, legumes, sucos e chás para purificar as células e acelerar o metabolismo e consequentemente o emagrecimento. Ela também possui baixas calorias, com poucos carboidratos e muito líquido.</p>
         </a>
-        <a class="item item-thumbnail-left divider-color" href="detox.html" ng-if="!emagrecer">
+        <a class="item item-thumbnail-left divider-color" href="sopa.html" ng-if="!emagrecer">
             <img src="sopa.jpg">
             <h2>Dieta da Sopa</h2>
             <p>Esta dieta costuma ser utilizada pelos famosos e por muitas mulheres, principalmente perto do verão e do carnaval por ter um efeito rápido para quem tem pressa em perder aqueles quilinhos a mais incomodando.</p>
         </a>
-        <a class="item item-thumbnail-left divider-color" href="detox.html" ng-if="!emagrecer">
+        <a class="item item-thumbnail-left divider-color" href="emagrecimento.html" ng-if="!emagrecer">
             <img src="emagrecimento.jpg">
-            <h2>Dieta do Emagrecimento</h2>
+            <h2>Dieta da proteína</h2>
             <p>Esta dieta para emagrecer em 15 dias permite uma rápida perda de peso, podendo-se reduzir cerca de 5 Kg em apenas duas semanas e sem muito sacrifício.</p>
         </a>
-        <a class="item item-thumbnail-left divider-color" href="detox.html" ng-if="!engordar">
+        <a class="item item-thumbnail-left divider-color" href="turbinada.html" ng-if="!engordar">
             <img src="turbinada.jpg">
             <h2>Dieta Turbinada</h2>
             <p>Você mantém a malhação em dia, mas ainda não conquistou os músculos que queria? Aposte nessa dieta turbinada, que ajuda você a ganhar massa magra e definição.</p>
         </a>
-        <a class="item item-thumbnail-left divider-color" href="detox.html" ng-if="!engordar">
-            <img src="turbinada.jpg">
+        <a class="item item-thumbnail-left divider-color" href="treino.html" ng-if="!engordar">
+            <img src="alimentação-saudável.jpg">
             <h2>Dieta para Treino</h2>
             <p>A dieta para aumentar a massa muscular se baseia em aumentar a quantidade de proteínas que se encontram em alimentos como peixe ou carne.</p>
         </a>
-        <a class="item item-thumbnail-left divider-color" href="detox.html" ng-if="!engordar">
-            <img src="turbinada.jpg">
+        <a class="item item-thumbnail-left divider-color" href="massa_magra.html" ng-if="!engordar">
+            <img src="Low-Carb.jpg">
             <h2>Dieta Massa magra</h2>
             <p>O ganho de massa muscular se apoia em dois pilares, o primeiro sendo a atividade fisica e o outro a alimentação.</p>
         </a>
@@ -99,14 +105,22 @@
     </ion-content>
       </ion-side-menu-content>  
             <!-- Menu na esquerda -->
-            <ion-side-menu side="left">
+
+            <ion-side-menu class="light-primary-color" side="left">
+              <div class="item item-avatar dark-primary-color divider-color">
+                <img align="center" id="foto2" src="">
+                <br>
+                <div align="center" id="nome_perfil2">
+                </div>
+              </div>
+              <div class="card light-primary-color">
               <ion-list>
-                 <ion-item><a class="primary-text-color" href="home.html">Home</a></ion-item>
-                  <ion-item><a class="primary-text-color" href="perfil.html">Perfil</a></ion-item>
-                  <ion-item><a class="primary-text-color" href="info.html">Informações</a></ion-item>
-                  <ion-item><a class="primary-text-color" href="dietas.html">Dietas</a></ion-item>
-                  <ion-item><a class="primary-text-color" href="sobre.html">Sobre</a></ion-item>
-                  <ion-item><a class="primary-text-color" href="config.html">Configurações</a></ion-item>
+                  <ion-item class="teeste"><a class="primary-text-color" href="home.html">Home</a></ion-item>
+                  <ion-item class="teeste"><a class="primary-text-color" href="perfil.html">Perfil</a></ion-item>
+                  <ion-item class="teeste"><a class="primary-text-color" href="info.html">Informações</a></ion-item>
+                  <ion-item class="teeste"><a class="primary-text-color" href="dietas.html">Dietas</a></ion-item>
+                  <ion-item class="teeste"><a class="primary-text-color" href="sobre.html">Sobre</a></ion-item>
+                  <ion-item class="teeste"><a class="primary-text-color" href="config.html">Configurações</a></ion-item>
               </ion-list>
             </ion-side-menu>
       </ion-side-menus>
