@@ -40,12 +40,16 @@
     <!-- google login-->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
-  <body ng-app="starter" ng-controller="AppCtrl" onload="initialize()">
+  <body ng-app="starter" ng-controller="AppCtrl">
     <script>
 		usuariosBD = localStorage.getItem("usuarios");
 		usuariosBD = JSON.parse(usuariosBD);
 		senhasBD = localStorage.getItem("senhas");
 		senhasBD = JSON.parse(senhasBD);
+		if(usuariosBD==null || senhasBD==null)
+		{
+		initiliaze();
+		}
 		
 		
 		function initialize(){
@@ -88,6 +92,13 @@
   localStorage.setItem("Name", profile.getName());
   localStorage.setItem("Foto", profile.getImageUrl());
 }
+
+    function google_logout() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+          console.log('Google logout');
+        });
+      }    
     </script>
     <ion-nav-bar class="bar-balanced">
     </ion-nav-bar>
@@ -125,6 +136,10 @@
 
 <br>
 <div id="msg" align="center">
+</div>
+
+<div id="logout">
+<button onclick="javascript:google_logout()" class="button icon-left ion-chevron-left button-clear button-dark text2">Logout</button>
 </div>
       </ion-content>
     </ion-pane>

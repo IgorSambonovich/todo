@@ -42,16 +42,97 @@
         function initialize(){
       document.getElementById("nome_perfil2").innerHTML = "<h2>" + localStorage.getItem("Name") + "</h2>";
       document.getElementById("foto2").src = localStorage.getItem("Foto");
+	  cafeBD = localStorage.getItem("cafe");
+		cafeBD = JSON.parse(cafeBD);
+		almocoBD = localStorage.getItem("almoco");
+		almocoBD = JSON.parse(almocoBD);
+		tardeBD = localStorage.getItem("tarde");
+		tardeBD = JSON.parse(tardeBD);
+		jantarBD = localStorage.getItem("jantar");
+		jantarBD = JSON.parse(jantarBD);
+		if(cafeBD==null)
+		{
+		initializeCafe();
+		}
+				if(almocoBD==null)
+		{
+		initializeAlmoco();
+		}
+				if(tardeBD==null)
+		{
+		initializeTarde();
+		}
+				if(jantarBD==null)
+		{
+		initializeJantar();
+		}
+		for(i=0; i<cafeBD.length; i++){
+			var para = document.createElement("p");
+			var node = document.createTextNode(cafeBD[i]);
+			para.appendChild(node);
+
+			var element = document.getElementById("cafe");
+			element.appendChild(para);
+		}
+		
+				for(i=0; i<almocoBD.length; i++){
+			var para = document.createElement("p");
+			var node = document.createTextNode(almocoBD[i]);
+			para.appendChild(node);
+
+			var element = document.getElementById("almoco");
+			element.appendChild(para);
+		}
+		
+				for(i=0; i<tardeBD.length; i++){
+			var para = document.createElement("p");
+			var node = document.createTextNode(tardeBD[i]);
+			para.appendChild(node);
+
+			var element = document.getElementById("tarde");
+			element.appendChild(para);
+		}
+		
+				for(i=0; i<jantarBD.length; i++){
+			var para = document.createElement("p");
+			var node = document.createTextNode(jantarBD[i]);
+			para.appendChild(node);
+
+			var element = document.getElementById("jantar");
+			element.appendChild(para);
+		}
+		
       }
+	  
+	  		function initializeCafe(){
+		var cafe = ["Cafe - 100kcal", "Torrada com manteiga - 150kcal"];
+		localStorage.setItem("cafe", JSON.stringify(cafe));
+      }
+	  
+	  		function initializeAlmoco(){
+		var almoco = ["Arroz - 100kcal", "Feijao - 150kcal", "Bife - 200kcal"];
+		localStorage.setItem("almoco", JSON.stringify(almoco));
+      }
+	  
+	  		function initializeTarde(){
+		var tarde = ["Banana - 50kcal", "Torrada com geleia - 100kcal"];
+		localStorage.setItem("tarde", JSON.stringify(tarde));
+      }
+	  
+	  		function initializeJantar(){
+		var jantar = ["Macarrao - 200kcal", "Copo de coca-cola - 100kcal"];
+		localStorage.setItem("jantar", JSON.stringify(jantar));
+      }
+	  
+	  
+function adicionarComida(){
+	window.location = "/adicionarComida.html";
+}
     </script>
 
 
-     <!-- <ion-floating-button click="myEvent()" has-footer="false" button-color="#03A9F4" icon="ion-plus" iconColor="#fff">
+     <ion-floating-button id="myBtn" onclick="javascript:adicionarComida()" has-footer="false" button-color="#03A9F4" icon="ion-plus" iconColor="#fff">
 </ion-floating-button> 
-<ion-floating-menu>
-    <ion-floating-item icon="ion-android-restaurant" click="myEvent()"></ion-floating-item>
-    <ion-floating-item icon="ion-star" click="myEvent()"></ion-floating-item>
-</ion-floating-menu> -->
 
     <ion-side-menus>
     <ion-side-menu-content>
@@ -72,10 +153,7 @@
   <div class="item item-divider default-primary-color">
     <a class="primary-text-color">Café da manhã</a>
   </div>
-  <div class="item item-text-wrap light-primary-color">
-    <p class="secondary-text-color">Pão francês: 1 unidade</p>
-    <p class="secondary-text-color">Queijo prato: 2 fatias</p>
-    <p class="secondary-text-color">Leite desnatado: 250ml</p>
+  <div class="item item-text-wrap light-primary-color" id= "cafe">
   </div>
 </div>
 
@@ -83,9 +161,15 @@
   <div class="item item-divider default-primary-color">
     <a class="primary-text-color">Almoço</a>
   </div>
-  <div class="item item-text-wrap light-primary-color">
-    <p>Lasanha: 2 unidades</p>
-    <p>Coca cola: 1 unidade (350ml)</p >
+  <div class="item item-text-wrap light-primary-color" id="almoco">
+  </div>
+</div>
+
+ <div class="card">
+  <div class="item item-divider default-primary-color">
+    Café da tarde
+  </div>
+  <div class="item item-text-wrap light-primary-color" id="tarde">
   </div>
 </div>
 
@@ -93,30 +177,7 @@
   <div class="item item-divider default-primary-color">
     Jantar
   </div>
-  <div class="item item-text-wrap light-primary-color">
-    <p>Frango grelhado: 1 unidade de 120 gramas</p>
-    <p>Salada de alface e tomate</p>
-    <p>Suco natural de laranja</p>
-  </div>
-</div>
-
-<div class="card">
-  <div class="item item-divider default-primary-color">
-    Ceia
-  </div>
-  <div class="item item-text-wrap light-primary-color">
-    <p>Pêra: 1 unidade</p>
-    <p>Iogurte de frutas vermelhas: 1 unidade (200ml)</p>
-  </div>
-</div>
-
-<div class="card">
-  <div class="item item-divider default-primary-color">
-    Lanche da madrugada
-  </div>
-  <div class="item item-text-wrap light-primary-color">
-    <p>Água</p>
-    <p>Maçã: 1 unidade</p>
+  <div class="item item-text-wrap light-primary-color" id="jantar">
   </div>
 </div>
 
